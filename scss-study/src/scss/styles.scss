@@ -1,13 +1,11 @@
 @import '_variables';
+@import '_mixins';
 
 body {
-  // background: #f9fafb;
-  background: $bg;
+  @include column-flexbox(); // Mixins!
+  background: #f9fafb;
+  // background: $bg;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   h1 {
     font-size: $title;
     color: #fff;
@@ -51,6 +49,24 @@ body {
     &:hover,
     &:active {
       background-color: darkorange;
+    }
+  }
+}
+
+.links {
+  margin-top: 10px;
+  a {
+    display: block;
+    margin-bottom: 10px;
+
+    &:nth-child(odd) {
+      // @include link(red);
+      @include linkByWord('odd');
+    }
+
+    &:nth-child(even) {
+      // @include link(green);
+      @include linkByWord('even');
     }
   }
 }
