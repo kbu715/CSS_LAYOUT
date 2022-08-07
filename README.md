@@ -149,5 +149,5 @@
 - [x] Variables
 - [x] Nesting
 - [x] Mixins
-- [ ] Extend
+- [x] Extend
 - [ ] Responsive Mixins

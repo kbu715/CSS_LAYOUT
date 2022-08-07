@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_mixins';
+@import '_buttons';
 
 body {
   @include column-flexbox(); // Mixins!
@@ -29,9 +30,6 @@ body {
       font-weight: 900;
     }
   }
-  a {
-    color: blue;
-  }
 }
 
 .box {
@@ -55,7 +53,7 @@ body {
 
 .links {
   margin-top: 10px;
-  a {
+  .link {
     display: block;
     margin-bottom: 10px;
 
@@ -69,4 +67,14 @@ body {
       @include linkByWord('even');
     }
   }
+}
+
+a {
+  @extend %button;
+  text-decoration: none;
+}
+
+button {
+  @extend %button;
+  border: none;
 }
