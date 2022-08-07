@@ -86,10 +86,47 @@
 
     /* grid-template-areas의 각 격자의 이름과 grid-area의 이름이 일치해야 된다! */
 ```
-- [ ] grid-column-start
-- [ ] grid-column-end
-- [ ] grid-row-start
-- [ ] grid-row-end
+- [x] grid-column-start
+```css
+.parents {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+}
+
+.header {
+    background-color: #2ecc71;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.content {
+    background-color: #3498db;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.nav {
+    background-color: violet;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.footer {
+    background-color: orange;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+```
+
+### 화면
+![grid-column-start](https://user-images.githubusercontent.com/63832678/183285900-7d40d4cc-571b-461c-acb8-9329f081b931.png)
+- [x] grid-column-end
+- [x] grid-row-start
+- [x] grid-row-end
 - [ ] grid-column
 - [ ] grid-row
 - [ ] grid-template
