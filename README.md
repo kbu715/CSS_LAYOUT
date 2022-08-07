@@ -142,3 +142,12 @@
 - [ ] grid-auto-rows
 - [ ] grid-auto-flow
 - [ ] grid-auto-columns
+
+
+## SCSS:
+
+- [ ] Variables
+- [ ] Nesting
+- [ ] Mixins
+- [ ] Extend
+- [ ] Responsive Mixins
