@@ -44,7 +44,48 @@
         gap: 10px;
     }
 ```
-- [ ] grid-template-areas
+- [x] repeat
+```css
+    .parents {
+        display: grid;
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: repeat(4, 200px);
+        gap: 10px;
+    }
+```
+- [x] grid-template-areas
+```css
+    .parents {
+        grid-template-columns: auto 200px; 
+        grid-template-rows: 100px repeat(2, 200px) 100px;
+        grid-template-areas:
+        "header header header header"
+        "content content content nav"
+        "content content content nav"
+        "footer footer footer footer";
+    }
+    
+    /* auto: 가능한한 크게, 200px를 제외하고 전부 차지! */
+
+    .header {
+        background-color: red;
+        grid-area: header;
+    }
+    .content {
+        background-color: blue;
+        grid-area: content;
+    }
+    .nav {
+        background-color: yellow;
+        grid-area: nav;
+    }
+    .footer {
+        background-color: green;
+        grid-area: footer;
+    }
+
+    /* grid-template-areas의 각 격자의 이름과 grid-area의 이름이 일치해야 된다! */
+```
 - [ ] grid-column-start
 - [ ] grid-column-end
 - [ ] grid-row-start
